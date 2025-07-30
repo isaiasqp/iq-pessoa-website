@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQ PESSOA CONSULTORIA FINANCEIRA E DE PATRIMÔNIO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        header {
+            background: #333 url('./assets/graph_up_arrow.png') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 120px; /* Aumentado para acomodar o gráfico */
+            border-bottom: #77aaff 3px solid;
+            text-align: center;
+            position: relative;
+        }
+        header::before { /* Overlay para escurecer o fundo e melhorar a legibilidade */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Escurece a imagem de fundo */
+            z-index: 1;
+        }
+        header .content-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            margin: 0;
+            padding: 0;
+        }
+        header img {
+            max-width: 200px;
+            margin-top: 10px;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        /* Cores suaves e nudes */
+        body {
+            background-color: #F8F5F0; /* Bege muito claro */
+        }
+        header {
+            background-color: #E0D9CE; /* Nude mais escuro para o cabeçalho */
+            color: #4A4A4A; /* Texto mais escuro para contraste */
+            border-bottom: #B8A78D 3px solid; /* Borda em tom dourado/nude */
+        }
+        .content {
+            background: #FFFFFF;
+        }
+        footer {
+            background: #B8A78D; /* Nude/dourado para o rodapé */
+            color: #FFFFFF;
+        }
+        h1, h2, h3 {
+            color: #5C4B3C; /* Marrom escuro para títulos */
+        }
+        /* Formulário de Contato */
+        .contact-form {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #B8A78D;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .contact-form button:hover {
+            background-color: #A0907A;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <img src="./assets/marca-mTeWYzQJ.png" alt="IQ PESSOA Logo">
+            <h1>IQ PESSOA CONSULTORIA FINANCEIRA E DE PATRIMÔNIO</h1>
+            <p>Sua parceria para um futuro financeiro sólido e independente.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="content">
+            <h2>Bem-vindo à IQ PESSOA</h2>
+            <p>Com mais de 25 anos de experiência no mercado financeiro, <strong>Isaias Quintão Pessoa</strong> oferece consultoria financeira e de patrimônio imparcial e sem vínculos com instituições bancárias. Nosso foco é o seu sucesso financeiro, utilizando a metodologia CFP® para um planejamento completo e personalizado.</p>
+            
+            <h3>Nossos Serviços:</h3>
+            <ul>
+                <li>Planejamento Financeiro Abrangente (Metodologia CFP®)</li>
+                <li>Gestão de Investimentos</li>
+                <li>Planejamento Tributário</li>
+                <li>Planejamento Sucessório</li>
+                <li>Análise de Portfólio</li>
+                <li>Consultoria para Family Offices</li>
+            </ul>
+
+            <h3>Por que escolher a IQ PESSOA?</h3>
+            <ul>
+                <li><strong>Imparcialidade:</strong> Nossas recomendações são baseadas exclusivamente nos seus interesses.</li>
+                <li><strong>Experiência:</strong> Mais de duas décadas de atuação no mercado financeiro.</li>
+                <li><strong>Metodologia Comprovada:</strong> Utilizamos os 6 passos da metodologia CFP® para garantir um planejamento eficaz.</li>
+                <li><strong>Personalização:</strong> Soluções financeiras adaptadas às suas necessidades e objetivos.</li>
+            </ul>
+
+            <p>Entre em contato conosco para agendar uma consulta e dar o primeiro passo rumo à sua independência financeira.</p>
+        </section>
+
+        <section class="contact-form">
+            <h2>Solicite um Contato</h2>
+            <form action="#" method="POST">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Telefone (opcional):</label>
+                <input type="text" id="phone" name="phone">
+
+                <label for="message">Mensagem (opcional):</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+
+                <button type="submit">Enviar Solicitação</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 IQ PESSOA CONSULTORIA FINANCEIRA E DE PATRIMÔNIO. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
