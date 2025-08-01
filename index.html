@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feche Negócios com a IQ PESSOA - Seu Futuro Financeiro Começa Agora!</title>
+    <title>IQ PESSOA CONSULTORIA FINANCEIRA E DE PATRIMÔNIO</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -93,7 +93,6 @@
             width: 90%;
             max-width: 1200px;
             margin: auto;
-            overflow: hidden;
             padding: 20px 0;
         }
         
@@ -121,12 +120,12 @@
         }
         
         header img {
-            max-width: 350px;
+            max-width: 300px;
             height: auto;
         }
         
         header h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 10px;
             color: #2C2B54;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
@@ -138,130 +137,126 @@
             color: #4A4A6A;
         }
         
-        .btn-primary {
-            display: inline-block;
-            background-color: #C4A574;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            animation: blink 1.5s infinite;
-        }
-        
-        .btn-primary:hover {
-            background-color: #B8985F;
-        }
-        
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-        
+        /* Sections */
         .section {
-            padding: 40px 0;
-            margin-bottom: 20px;
             background: #FFFFFF;
+            padding: 40px;
+            margin-bottom: 30px;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0,0,0,0.08);
-            scroll-margin-top: 20px;
         }
         
         .section h2 {
-            text-align: center;
-            font-size: 2.5em;
             color: #2C2B54;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            font-size: 2em;
+            text-align: center;
         }
         
         .section h3 {
-            font-size: 1.8em;
             color: #C4A574;
             margin-bottom: 15px;
+            font-size: 1.3em;
         }
         
-        .section p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-        
-        .highlight {
-            color: #C4A574;
-            font-weight: bold;
-        }
-        
-        .grid-3-cols {
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 30px;
         }
         
-        .grid-item {
-            background-color: #FDFCFA;
+        .benefit-card {
+            background: #F9F7F4;
             padding: 25px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
-            text-align: center;
+            border-left: 4px solid #C4A574;
+            transition: transform 0.3s ease;
         }
         
-        .grid-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 15px;
+        .benefit-card:hover {
+            transform: translateY(-5px);
         }
         
-        .testimonial {
-            background-color: #E8E2D5;
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 40px;
-            text-align: center;
-            font-style: italic;
+        .benefit-card h4 {
             color: #2C2B54;
-        }
-        
-        .testimonial p {
+            margin-bottom: 15px;
             font-size: 1.2em;
-            margin-bottom: 10px;
         }
         
-        .testimonial span {
-            font-weight: bold;
-            color: #C4A574;
-        }
-        
-        .contact-form {
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
             margin-top: 30px;
-            padding: 30px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
         }
         
-        .contact-form label {
+        .service-item {
+            background: #F9F7F4;
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 4px solid #C4A574;
+        }
+        
+        .service-item h4 {
+            color: #2C2B54;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: #F9F7F4;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .contact-form h3 {
+            text-align: center;
+            color: #2C2B54;
+            margin-bottom: 25px;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        label {
             display: block;
             margin-bottom: 8px;
             font-weight: bold;
             color: #2C2B54;
         }
         
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form textarea {
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
             width: calc(100% - 22px);
             padding: 12px;
-            margin-bottom: 18px;
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 1em;
+            font-family: inherit;
         }
         
-        .contact-form button {
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
             background-color: #C4A574;
             color: white;
             padding: 15px 30px;
@@ -270,37 +265,31 @@
             cursor: pointer;
             font-size: 1.1em;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            width: 100%;
+            animation: pulse 2s infinite;
         }
         
-        .contact-form button:hover {
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(196, 165, 116, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(196, 165, 116, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(196, 165, 116, 0); }
+        }
+        
+        .submit-btn:hover {
             background-color: #B8985F;
+            transform: translateY(-2px);
         }
         
         footer {
+            background: linear-gradient(135deg, #2C2B54 0%, #4A4A6A 100%);
+            color: white;
             text-align: center;
-            padding: 30px;
-            background: #C4A574;
-            color: #FFFFFF;
-            margin-top: 40px;
-            font-size: 0.9em;
+            padding: 30px 0;
+            margin-top: 50px;
         }
         
-        .disclaimer {
-            font-size: 0.9em;
-            color: #666;
-            font-style: italic;
-            margin-top: 10px;
-        }
-        
-        .service-item {
-            margin-bottom: 30px;
-            padding: 20px;
-            border-left: 4px solid #C4A574;
-            background-color: #FDFCFA;
-        }
-        
-        /* Mobile Toggle Button (hidden on desktop) */
+        /* Mobile Toggle Button */
         .mobile-nav-toggle {
             display: none;
             position: fixed;
@@ -345,14 +334,25 @@
                 display: block;
             }
             
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .header-content {
                 flex-direction: column;
             }
+            
             header h1 {
-                font-size: 2.2em;
+                font-size: 2em;
             }
+            
             header img {
-                max-width: 250px;
+                max-width: 200px;
+            }
+            
+            .benefits-grid,
+            .services-list {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -389,7 +389,7 @@
             <h3>Navegação Rápida</h3>
         </div>
         <ul>
-            <li><a href="#inicio">🏠 Início</a></li>
+            <li><a href="#inicio" class="active">🏠 Início</a></li>
             <li><a href="#beneficios">⭐ O que Você Ganha</a></li>
             <li><a href="#servicos">🎯 Nossos Serviços</a></li>
             <li><a href="#analise">📊 Ponto de Partida</a></li>
@@ -406,202 +406,216 @@
                 <div class="header-content">
                     <img src="./assets/marca-mTeWYzQJ.png" alt="IQ PESSOA Logo">
                     <div class="header-text">
-                        <h1>Seu Futuro Financeiro Não Pode Esperar. <span class="highlight">Aja Agora!</span></h1>
-                        <p>Com Isaias Quintão Pessoa, CFP®, você transforma incertezas em <span class="highlight">resultados concretos e patrimônio sólido.</span></p>
-                        <a href="#contato" class="btn-primary">Quero Multiplicar Meu Patrimônio!</a>
+                        <h1>IQ PESSOA CONSULTORIA FINANCEIRA E DE PATRIMÔNIO</h1>
+                        <p>Sua parceria para um futuro financeiro sólido e independente.</p>
+                        <p><strong>Isaias Quintão Pessoa</strong> - Mais de 25 anos de experiência no mercado financeiro</p>
                     </div>
                 </div>
             </div>
         </header>
 
         <div class="container">
-            <section class="section" id="beneficios">
-                <h2>O Que Você Ganha ao Escolher a IQ PESSOA?</h2>
-                <div class="grid-3-cols">
-                    <div class="grid-item">
-                        <h3><span class="highlight">Experiência Incomparável</span></h3>
-                        <p>Mais de 25 anos de atuação no mercado financeiro, com histórico comprovado de sucesso em grandes instituições. <br>Isaias Quintão Pessoa traz a expertise que seu patrimônio merece.</p>
+            <section id="beneficios" class="section">
+                <h2>⭐ O que Você Ganha com a IQ Assessoria</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h4>🎯 Estratégias Consistentes</h4>
+                        <p>Desenvolvemos estratégias que buscam superar benchmarks de mercado, com foco na preservação e multiplicação do patrimônio ao longo do tempo.</p>
                     </div>
-                    <div class="grid-item">
-                        <h3><span class="highlight">Independência Total</span></h3>
-                        <p>Nossas recomendações são 100% imparciais, focadas exclusivamente nos SEUS objetivos. Sem conflitos de interesse, sem metas de bancos, apenas o melhor para você.</p>
+                    <div class="benefit-card">
+                        <h4>💰 Custo Baixo, Alto Valor</h4>
+                        <p>O retorno percebido por nossos clientes se traduz em economia de custos, otimização fiscal e mais recursos investidos. Investimento acessível com benefícios duradouros.</p>
                     </div>
-                    <div class="grid-item">
-                        <h3><span class="highlight">Estratégias Consistentes</span></h3>
-                        <p>Desenvolvemos estratégias que buscam superar benchmarks de mercado, com foco na preservação e multiplicação do patrimônio ao longo do tempo, sempre respeitando seu perfil e objetivos.*</p>
-                        <p class="disclaimer">*Rentabilidade passada não garante resultados futuros.</p>
+                    <div class="benefit-card">
+                        <h4>🏆 Experiência Comprovada</h4>
+                        <p>Mais de 25 anos de atuação no mercado financeiro, utilizando metodologia CFP® reconhecida internacionalmente.</p>
                     </div>
-                </div>
-                <div class="grid-3-cols">
-                    <div class="grid-item">
-                        <h3><span class="highlight">Custo Baixo, Benefício Gigante</span></h3>
-                        <p>O valor do nosso serviço é um investimento que se paga rapidamente. O retorno percebido por nossos clientes se traduz em economia de custos, otimização fiscal e mais recursos investidos para alcançar seus objetivos.</p>
-                    </div>
-                    <div class="grid-item">
-                        <h3><span class="highlight">Planejamento Estratégico CFP®</span></h3>
-                        <p>Utilizamos a metodologia CFP® (Certified Financial Planner) para um planejamento abrangente e ético, garantindo que cada passo seja sólido e alinhado aos seus sonhos.</p>
-                    </div>
-                    <div class="grid-item">
-                        <h3><span class="highlight">Paz de Espírito</span></h3>
-                        <p>Deixe a complexidade financeira conosco. Tenha a tranquilidade de saber que seu futuro está sendo construído com inteligência, segurança e um olhar atento ao seu legado.</p>
+                    <div class="benefit-card">
+                        <h4>🔒 Total Independência</h4>
+                        <p>Somos totalmente independentes e não temos exclusividade com nenhum banco ou corretora. Isso nos permite ver o que é melhor para VOCÊ, sem viés, e reduzir em média 50% do seu custo.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="section" id="servicos">
-                <h2>Nossos Serviços: O Caminho para Sua Liberdade Financeira</h2>
-                <div class="service-item">
-                    <h3>1. Planejamento Financeiro Abrangente (Metodologia CFP®)</h3>
-                    <p><strong>O que é:</strong> O CFP® (Certified Financial Planner) é uma certificação internacional que garante que o profissional possui o mais alto nível de conhecimento e ética em planejamento financeiro. Nosso trabalho é construir um plano financeiro completo e personalizado, que se adapta às suas necessidades e objetivos de vida, seja para aposentadoria, compra de bens, educação dos filhos, ou para quem busca sair de dívidas e começar a construir seu patrimônio. O escopo do trabalho será definido em conjunto, garantindo que o plano atenda exatamente ao que você precisa.</p>
-                    <p><strong>Benefício:</strong> Você terá um mapa claro para suas finanças, com estratégias desenhadas sob medida para alcançar seus objetivos, independentemente do seu ponto de partida financeiro.</p>
-                    <p><strong>O que você ganha:</strong> Clareza, segurança e um caminho estruturado para realizar seus sonhos financeiros, com a confiança de um profissional certificado internacionalmente, acessível a todos os perfis.</p>
-                </div>
-                <div class="service-item">
-                    <h3>2. Gestão de Investimentos</h3>
-                    <p><strong>O que é:</strong> Analisamos seu perfil de risco e seus objetivos para construir e gerenciar uma carteira de investimentos diversificada e otimizada. Não vendemos produtos, mas indicamos as melhores opções do mercado, sempre com foco na sua rentabilidade e segurança. Imagine ter um especialista que olha para todos os seus investimentos na instituição financeira que você escolhe ou a que você tem menores custos e maior rentabilidade, ou seja, não precisa sair da sua instituição.</p>
-                    <p><strong>Nosso Diferencial:</strong> Somos totalmente independentes e não temos exclusividade com nenhum banco ou corretora. Isso nos permite ver o que é melhor para VOCÊ, sem viés, e reduzir em média 50% do seu custo, consequentemente aumentando a rentabilidade. Não somos comissionados por nenhum produto, nosso modelo é como o europeu e americano (onde é comum ter a figura do planejador financeiro) e o planejador financeiro recebe pela assessoria independente da alocação.</p>
-                    <p><strong>Política de Remuneração:</strong> Nossa remuneração é acordada previamente, podendo ser por projeto, por hora ou por acompanhamento contínuo, sempre transparente e sem comissões de produtos financeiros.</p>
-                    <p><strong>O que você ganha:</strong> Rentabilidade superior, diversificação inteligente e a tranquilidade de saber que seu dinheiro está sendo bem cuidado por um especialista independente, com foco exclusivo nos seus interesses e na construção de uma carteira com lógica e alinhada aos seus objetivos.</p>
-                </div>
-                <div class="service-item">
-                    <h3>3. Organização Financeira e Orçamento</h3>
-                    <p><strong>O que é:</strong> Organizamos completamente sua vida financeira, criando um orçamento personalizado e estratégias para reduzir custos desnecessários. Analisamos seus gastos, identificamos oportunidades de economia, renegociamos contratos e financiamentos para conseguir condições mais vantajosas, e ajudamos você a pagar menos juros através da troca por financiamentos mais baratos.</p>
-                    <p><strong>Benefício:</strong> Você terá controle total sobre suas finanças, pagará menos juros, eliminará gastos supérfluos e liberará mais recursos para investimentos e realização de sonhos.</p>
-                    <p><strong>O que você ganha:</strong> Organização financeira completa, redução significativa de custos, melhores condições em financiamentos e a tranquilidade de saber exatamente para onde vai cada centavo do seu dinheiro.</p>
-                </div>
-                <div class="service-item">
-                    <h3>4. Planejamento Tributário</h3>
-                    <p><strong>O que é:</strong> Identificamos oportunidades legais para otimizar sua carga tributária, tanto para pessoas físicas quanto jurídicas. Isso inclui estratégias para investimentos, heranças, doações e outras operações financeiras.</p>
-                    <p><strong>Benefício:</strong> Você paga menos impostos de forma legal, aumentando seu patrimônio disponível para investimentos e consumo.</p>
-                    <p><strong>O que você ganha:</strong> Economia significativa de impostos e a garantia de que suas finanças estão em conformidade com a legislação, evitando surpresas desagradáveis.</p>
-                </div>
-                <div class="service-item">
-                    <h3>5. Planejamento Sucessório</h3>
-                    <p><strong>O que é:</strong> Estruturamos a transmissão do seu patrimônio para as futuras gerações de forma eficiente e harmoniosa, minimizando burocracias e custos. Isso pode envolver testamentos, doações, holdings familiares e previdência privada.</p>
-                    <p><strong>Benefício:</strong> Você garante que seu legado será preservado e seus herdeiros estarão protegidos, evitando conflitos e despesas desnecessárias no futuro.</p>
-                    <p><strong>O que você ganha:</strong> Paz de espírito ao saber que sua família estará segura e seu patrimônio será transmitido conforme seus desejos, com menos custos e burocracia.</p>
-                </div>
-                <div class="service-item">
-                    <h3>6. Planejamento de Aposentadoria</h3>
-                    <p><strong>O que é:</strong> Calculamos o valor que você precisa acumular para ter a renda desejada na aposentadoria, considerando a perpetuidade do seu patrimônio. Desenvolvemos estratégias personalizadas para que você alcance a liberdade financeira e desfrute de um futuro tranquilo.</p>
-                    <p><strong>Benefício:</strong> Você terá um plano claro e um valor-alvo para sua aposentadoria, garantindo que seus recursos durem por toda a vida e até mesmo para as próximas gerações.</p>
-                    <p><strong>O que você ganha:</strong> Segurança e tranquilidade para o seu futuro, com a certeza de que sua aposentadoria será confortável e seu legado financeiro será perpetuado.</p>
-                </div>
-                <div class="service-item">
-                    <h3>7. Análise de Portfólio</h3>
-                    <p><strong>O que é:</strong> Realizamos uma avaliação detalhada da sua carteira de investimentos atual, identificando pontos fortes, fracos, rentabilidade, diversificação e adequação ao seu perfil de risco. Com base nessa análise, propomos ajustes para otimizar seus resultados.</p>
-                    <p><strong>Benefício:</strong> Você terá uma visão clara do desempenho dos seus investimentos e receberá recomendações precisas para melhorá-los.</p>
-                    <p><strong>O que você ganha:</strong> Otimização da sua carteira de investimentos, maior rentabilidade e alinhamento com seus objetivos financeiros.</p>
-                </div>
-                <div class="service-item">
-                    <h3>8. Consultoria para Multi Family Office Não Discricionário</h3>
-                    <p><strong>O que é:</strong> Oferecemos um serviço completo de gestão patrimonial para famílias de alta renda, atuando como um verdadeiro "CFO da família", cuidando de todos os aspectos financeiros, sucessórios, tributários e de governança. Em um Multi Family Office, diversas famílias compartilham a estrutura e expertise, otimizando custos e acessando um nível de serviço que seria inviável individualmente.</p>
-                    <p><strong>Modelo Não Discricionário:</strong> Nosso modelo é não discricionário, o que significa que fazemos todas as recomendações e análises técnicas, mas você participa ativamente de todas as decisões de investimento. Isso garante que você mantenha total controle sobre seu patrimônio, enquanto conta com nossa expertise para tomar decisões mais informadas e estratégicas. Nosso especialista olha para todos os seus investimentos na instituição financeira que você escolhe ou a que você tem menores custos e maior rentabilidade.</p>
-                    <p><strong>Vantagens do Modelo Não Discricionário:</strong> Transparência total nas decisões, controle absoluto sobre seu patrimônio, participação ativa no processo decisório, educação financeira contínua e alinhamento completo com seus valores e objetivos pessoais.</p>
-                    <p><strong>Benefício:</strong> Você terá uma gestão integrada e profissional de todo o seu patrimônio, com total discrição e personalização, garantindo a perenidade e o crescimento dos seus bens ao longo das gerações, com a vantagem da otimização de custos e acesso a um pool de expertise de um Multi Family Office.</p>
-                    <p><strong>O que você ganha:</strong> Tranquilidade, segurança e a certeza de que seu legado está sendo construído e protegido com a máxima expertise e cuidado, mantendo sempre o controle total sobre as decisões, com a eficiência e abrangência de um Multi Family Office.</p>
-                </div>
-            </section>
-
-            <section class="section" id="analise">
-                <h2>Análise e Avaliação da Sua Situação Financeira: O Ponto de Partida para o Sucesso</h2>
-                <p>Antes de traçarmos qualquer estratégia, é fundamental entender profundamente sua realidade financeira. Nossa análise é completa e detalhada, focada em identificar oportunidades e mitigar riscos:</p>
-                <div class="service-item">
-                    <h3>Análise de Fluxo de Caixa: Onde Seu Dinheiro Vai?</h3>
-                    <p><strong>O que é:</strong> Entendemos a origem e o destino de cada centavo que entra e sai da sua conta. Mapeamos suas receitas e despesas para identificar padrões e gargalos.</p>
-                    <p><strong>O que você ganha:</strong> Clareza total sobre seus hábitos de consumo e onde você pode otimizar seus gastos para liberar mais recursos para seus objetivos.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Análise de Balanço Patrimonial: A Radiografia do Seu Patrimônio</h3>
-                    <p><strong>O que é:</strong> Avaliamos a composição do seu patrimônio (ativos como investimentos, imóveis, bens e passivos como dívidas, financiamentos) para ter uma visão clara da sua saúde financeira atual.</p>
-                    <p><strong>O que você ganha:</strong> Uma visão consolidada de tudo o que você possui e deve, permitindo decisões mais assertivas sobre como crescer e proteger seu patrimônio.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Análise de Investimentos: Seu Dinheiro Trabalhando para Você</h3>
-                    <p><strong>O que é:</strong> Revisamos sua carteira de investimentos existente, avaliando rentabilidade, diversificação e adequação ao seu perfil de risco. Identificamos se seus investimentos estão alinhados aos seus objetivos.</p>
-                    <p><strong>O que você ganha:</strong> Otimização da sua carteira, maior rentabilidade e a certeza de que seus investimentos estão no caminho certo para alcançar seus sonhos.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Análise de Seguros: Proteção para o Inesperado</h3>
-                    <p><strong>O que é:</strong> Avaliamos suas coberturas de seguros (vida, saúde, patrimonial) para garantir que você e sua família estejam adequadamente protegidos contra imprevistos, sem pagar a mais por isso.</p>
-                    <p><strong>O que você ganha:</strong> Segurança e tranquilidade ao saber que você e sua família estão protegidos, com coberturas adequadas e eficientes.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Análise Tributária: Otimizando Seus Impostos</h3>
-                    <p><strong>O que é:</strong> Identificamos oportunidades legais para reduzir sua carga tributária, tanto em investimentos quanto em outras áreas da sua vida financeira.</p>
-                    <p><strong>O que você ganha:</strong> Mais dinheiro no seu bolso, através da otimização fiscal e da conformidade com a legislação, evitando surpresas desagradáveis.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Análise Sucessória: Seu Legado Protegido</h3>
-                    <p><strong>O que é:</strong> Avaliamos a estrutura atual de sucessão do seu patrimônio, identificando necessidades e oportunidades para garantir que seus bens sejam transmitidos de forma eficiente e harmoniosa.</p>
-                    <p><strong>O que você ganha:</strong> Paz de espírito ao saber que seu legado será preservado e seus herdeiros estarão protegidos, com menos burocracia e custos.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Identificação de Lacunas: Onde Podemos Melhorar?</h3>
-                    <p><strong>O que é:</strong> Apontamos áreas onde você pode melhorar sua situação financeira ou onde há riscos não mitigados, oferecendo soluções personalizadas para cada desafio.</p>
-                    <p><strong>O que você ganha:</strong> Um plano de ação claro para corrigir falhas, aproveitar oportunidades e fortalecer sua saúde financeira de forma abrangente.</p>
-                </div>
-            </section>
-
-            <section class="section" id="futuro">
-                <h2>Imagine Seu Futuro Financeiro Com a IQ PESSOA</h2>
-                <div class="grid-3-cols">
-                    <div class="grid-item">
-                        <img src="./assets/handshake.png" alt="Aperto de Mãos">
-                        <h3><span class="highlight">Parceria de Sucesso</span></h3>
-                        <p>Construa um relacionamento de confiança com um especialista que entende suas necessidades e luta pelos seus interesses.</p>
+            <section id="servicos" class="section">
+                <h2>🎯 Nossos Serviços</h2>
+                <div class="services-list">
+                    <div class="service-item">
+                        <h4>📋 Planejamento Financeiro Abrangente (Metodologia CFP®)</h4>
+                        <p><strong>O que é CFP®:</strong> Certified Financial Planner é a certificação internacional mais reconhecida em planejamento financeiro.</p>
+                        <p><strong>Benefício:</strong> Escopo de trabalho personalizado de acordo com sua necessidade e objetivos específicos.</p>
                     </div>
-                    <div class="grid-item">
-                        <img src="./assets/office_meeting.png" alt="Reunião de Negócios">
-                        <h3><span class="highlight">Decisões Estratégicas</span></h3>
-                        <p>Tenha acesso a análises aprofundadas e recomendações que só a experiência de mercado pode oferecer, em um ambiente de total discrição.</p>
+                    <div class="service-item">
+                        <h4>📈 Gestão de Investimentos</h4>
+                        <p><strong>Nosso Diferencial:</strong> Imagine ter um especialista que olha para todos os seus investimentos na instituição financeira que você escolhe ou a que você tem menores custos e maior rentabilidade.</p>
+                        <p><strong>Benefício:</strong> Não precisa sair da sua instituição atual. Nosso modelo é como o europeu e americano, onde o planejador financeiro recebe pela assessoria independente da alocação.</p>
                     </div>
-                    <div class="grid-item">
-                        <img src="./assets/sophisticated_graph_2.png" alt="Gráfico Sofisticado">
-                        <h3><span class="highlight">Crescimento Exponencial</span></h3>
-                        <p>Veja seu patrimônio crescer de forma consistente e segura, com estratégias que maximizam seus ganhos e minimizam riscos.</p>
+                    <div class="service-item">
+                        <h4>🏛️ Planejamento Tributário</h4>
+                        <p><strong>O que fazemos:</strong> Identificamos oportunidades de otimização fiscal e redução legal de impostos.</p>
+                        <p><strong>Benefício:</strong> Mais dinheiro no seu bolso através de estratégias fiscais inteligentes.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>👨‍👩‍👧‍👦 Planejamento Sucessório</h4>
+                        <p><strong>O que fazemos:</strong> Estruturamos a transferência do seu patrimônio de forma eficiente e segura.</p>
+                        <p><strong>Benefício:</strong> Proteção do seu legado familiar e redução de conflitos futuros.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>📊 Análise de Portfólio</h4>
+                        <p><strong>O que fazemos:</strong> Revisamos sua carteira de investimentos existente, analisando rentabilidade, diversificação e adequação ao seu perfil.</p>
+                        <p><strong>Benefício:</strong> Otimização dos seus investimentos atuais sem necessidade de mudanças drásticas.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🏢 Consultoria para Multi Family Office (Não Discricionário)</h4>
+                        <p><strong>O que é Multi Family Office Não Discricionário:</strong> Atendemos múltiplas famílias com patrimônio elevado, onde fazemos recomendações e o cliente participa da efetivação das decisões.</p>
+                        <p><strong>Vantagens do Multi:</strong> Custos compartilhados, maior poder de negociação e acesso a investimentos exclusivos.</p>
+                        <p><strong>Benefício:</strong> Serviços de alta qualidade com custos reduzidos através do modelo compartilhado.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>📝 Organização Financeira e Orçamento</h4>
+                        <p><strong>O que fazemos:</strong> Organizamos sua vida financeira, renegociamos dívidas e criamos estratégias para redução de juros.</p>
+                        <p><strong>Benefício:</strong> Troca de financiamentos mais baratos, organização financeira completa e redução significativa de custos.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🏖️ Planejamento de Aposentadoria</h4>
+                        <p><strong>O que fazemos:</strong> Calculamos o valor que você precisa juntar para ter a renda desejada na aposentadoria, com foco na perpetuidade.</p>
+                        <p><strong>Benefício:</strong> Segurança financeira para toda a vida, com renda suficiente para manter seu padrão de vida.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="section" id="contato">
-                <h2>Não Deixe Seu Patrimônio ao Acaso.</h2>
-                <p style="text-align: center; font-size: 1.3em; margin-bottom: 30px;">A hora de agir é agora. Cada dia sem um planejamento financeiro estratégico é um dia de oportunidades perdidas.</p>
-                <div class="testimonial">
-                    <p>"Antes da Assessoria e direcionamento do Isaias, eu me sentia perdido com meus investimentos. Hoje, tenho clareza, segurança e vejo meu patrimônio prosperar como nunca imaginei. É um investimento que vale cada centavo!"</p>
-                    <span>- Cliente Satisfeito, Empresário</span>
-                    <p class="disclaimer" style="font-size: 0.8em; margin-top: 10px;">Depoimento autorizado de cliente real. Nome omitido por confidencialidade.</p>
+            <section id="analise" class="section">
+                <h2>📊 Ponto de Partida para o Sucesso</h2>
+                <h3>Análise e Avaliação da Situação Financeira do Cliente</h3>
+                <p>Com as informações coletadas, realizamos uma análise aprofundada para identificar sua situação financeira atual, pontos fortes, fracos, oportunidades e ameaças:</p>
+                
+                <div class="services-list">
+                    <div class="service-item">
+                        <h4>💰 Análise de Fluxo de Caixa</h4>
+                        <p>Entendemos a origem e o destino do seu dinheiro para otimizar suas finanças.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🏦 Análise de Balanço Patrimonial</h4>
+                        <p>Avaliamos a composição do seu patrimônio (ativos e passivos) para maximizar sua riqueza.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>📈 Análise de Investimentos</h4>
+                        <p>Revisamos sua carteira existente: rentabilidade, diversificação e adequação ao seu perfil de risco.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🛡️ Análise de Seguros</h4>
+                        <p>Avaliamos coberturas (vida, saúde, patrimonial) e adequação às suas necessidades reais.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>🏛️ Análise Tributária</h4>
+                        <p>Identificamos oportunidades de otimização fiscal e riscos tributários a serem mitigados.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>👨‍👩‍👧‍👦 Análise Sucessória</h4>
+                        <p>Avaliamos a estrutura atual de sucessão e identificamos necessidades de planejamento.</p>
+                    </div>
                 </div>
+            </section>
+
+            <section id="futuro" class="section">
+                <h2>🚀 Seu Futuro Financeiro Começa Agora</h2>
+                <div class="benefit-card">
+                    <h4>🎯 A Primeira Mudança que Você Vai Sentir</h4>
+                    <p><strong>Quando mudar para a minha assessoria, a primeira mudança que você vai sentir é que a carteira vai ser construída com lógica.</strong></p>
+                    <p>Vejo muitas carteiras sem nenhuma lógica (talvez apenas produto). Sempre alocamos considerando SUA carteira específica. Quando você tem um planejador sem viés, o foco está em VOCÊ.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>💡 Nossa Política de Remuneração</h4>
+                    <p>Nossa remuneração é acordada previamente, podendo ser por projeto, por hora ou por acompanhamento contínuo, sempre transparente e sem comissões.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>⚠️ Importante</h4>
+                    <p><em>*Rentabilidade passada não garante resultados futuros. Nosso foco é desenvolver estratégias consistentes para o longo prazo.</em></p>
+                </div>
+            </section>
+
+            <section id="contato" class="section">
+                <h2>📞 Pronto para Transformar Sua Vida Financeira?</h2>
+                <p style="text-align: center; font-size: 1.2em; margin-bottom: 30px;">
+                    <strong>Não importa se você quer sair das dívidas, começar a investir ou multiplicar seu patrimônio.</strong>  
+
+                    Nossa assessoria é para TODOS que buscam independência financeira.
+                </p>
+                
                 <div class="contact-form">
-                    <h2>Pronto para Transformar Sua Vida Financeira?</h2>
-                    <p style="text-align: center; margin-bottom: 20px;">Preencha o formulário abaixo ou envie um e-mail para isaiasqpessoa@gmail.com  e agende sua consulta estratégica gratuita. Descubra como podemos levar seu patrimônio ao próximo nível.</p>
-                    <form action="#" method="POST">
-                        <label for="name">Nome Completo:</label>
-                        <input type="text" id="name" name="name" required>
+                    <h3>Solicite um Contato - É Gratuito!</h3>
+                    <form name="contato" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contato">
+                        <p style="display: none;">
+                            <label>Não preencha este campo se você for humano: <input name="bot-field"></label>
+                        </p>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Nome Completo *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
 
-                        <label for="email">Seu Melhor E-mail:</label>
-                        <input type="email" id="email" name="email" required>
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
 
-                        <label for="phone">Telefone (com DDD):</label>
-                        <input type="text" id="phone" name="phone">
+                            <div class="form-group">
+                                <label for="phone">Telefone/WhatsApp</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
 
-                        <label for="message">Sua Principal Dúvida ou Objetivo Financeiro:</label>
-                        <textarea id="message" name="message" rows="5"></textarea>
+                            <div class="form-group">
+                                <label for="city">Cidade</label>
+                                <input type="text" id="city" name="city">
+                            </div>
 
-                        <button type="submit">Quero Minha Consulta Gratuita!</button>
+                            <div class="form-group full-width">
+                                <label for="situation">Qual sua situação atual?</label>
+                                <textarea id="situation" name="situation" placeholder="Ex: Tenho dívidas e quero me organizar / Quero começar a investir / Já invisto mas quero otimizar / Tenho patrimônio e preciso de planejamento sucessório"></textarea>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="message">Mensagem (opcional)</label>
+                                <textarea id="message" name="message" placeholder="Conte-nos mais sobre seus objetivos financeiros..."></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">🚀 QUERO TRANSFORMAR MINHA VIDA FINANCEIRA!</button>
                     </form>
                 </div>
             </section>
         </div>
 
         <footer>
-            <p>&copy; 2025 IQ PESSOA CONSULTORIA FINANCEIRA E DE PATRIMÔNIO. Todos os direitos reservados.</p>
+            <div class="container">
+                <p>&copy; 2025 IQ PESSOA CONSULTORIA FINANCEIRA E DE PATRIMÔNIO. Todos os direitos reservados.</p>
+                <p>Isaias Quintão Pessoa - Planejador Financeiro CFP®</p>
+            </div>
         </footer>
     </div>
 
     <script>
-        // Smooth scrolling para links âncora
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // Mobile Navigation
+        function toggleMobileNav() {
+            const sidebar = document.getElementById('sidebarNav');
+            const overlay = document.querySelector('.mobile-overlay');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+        }
+
+        function closeMobileNav() {
+            const sidebar = document.getElementById('sidebarNav');
+            const overlay = document.querySelector('.mobile-overlay');
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.sidebar-nav a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
@@ -611,69 +625,39 @@
                         block: 'start'
                     });
                     
-                    // Atualizar link ativo
-                    updateActiveLink(this.getAttribute('href'));
-                }
-            });
-        });
-        
-        // Função para atualizar link ativo
-        function updateActiveLink(targetId) {
-            document.querySelectorAll('.sidebar-nav a').forEach(link => {
-                link.classList.remove('active');
-            });
-            document.querySelector(`.sidebar-nav a[href="${targetId}"]`)?.classList.add('active');
-        }
-        
-        // Detectar seção ativa durante scroll
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('.section, header');
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (window.pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            if (current) {
-                updateActiveLink('#' + current);
-            }
-        });
-        
-        // Mobile navigation functions
-        function toggleMobileNav() {
-            const sidebar = document.getElementById('sidebarNav');
-            const overlay = document.querySelector('.mobile-overlay');
-            
-            sidebar.classList.toggle('open');
-            overlay.classList.toggle('active');
-        }
-        
-        function closeMobileNav() {
-            const sidebar = document.getElementById('sidebarNav');
-            const overlay = document.querySelector('.mobile-overlay');
-            
-            sidebar.classList.remove('open');
-            overlay.classList.remove('active');
-        }
-        
-        // Fechar menu mobile ao clicar em link
-        document.querySelectorAll('.sidebar-nav a').forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
+                    // Update active link
+                    document.querySelectorAll('.sidebar-nav a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Close mobile nav if open
                     closeMobileNav();
                 }
             });
         });
-        
-        // Inicializar link ativo
-        document.addEventListener('DOMContentLoaded', function() {
-            updateActiveLink('#inicio');
+
+        // Update active link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id], header[id]');
+            const navLinks = document.querySelectorAll('.sidebar-nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
         });
     </script>
 </body>
 </html>
-
