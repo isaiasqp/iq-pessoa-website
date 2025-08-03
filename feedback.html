@@ -3,586 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deixe seu Feedback - IQ PESSOA</title>
+    <title>Feedback - IQ PESSOA CONSULTORIA</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #F5F2ED;
+            background-color: #F8F5F0;
             color: #333;
-            line-height: 1.6;
         }
-        
-        /* Fixed Sidebar Navigation */
-        .sidebar-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 250px;
-            height: 100vh;
-            background: linear-gradient(180deg, #2C2B54 0%, #4A4A6A 100%);
-            color: white;
-            padding: 30px 20px;
-            box-shadow: 2px 0 15px rgba(0,0,0,0.1);
-            overflow-y: auto;
-            z-index: 1000;
-        }
-        
-        .sidebar-nav .logo {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #C4A574;
-        }
-        
-        .sidebar-nav .logo img {
-            max-width: 180px;
-            height: auto;
-        }
-        
-        .sidebar-nav .logo h3 {
-            color: #C4A574;
-            margin: 15px 0 0 0;
-            font-size: 1.1em;
-            font-weight: normal;
-        }
-        
-        .sidebar-nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .sidebar-nav li {
-            margin-bottom: 8px;
-        }
-        
-        .sidebar-nav a {
-            color: #E8E2D5;
-            text-decoration: none;
-            display: block;
-            padding: 12px 15px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-size: 0.95em;
-            font-weight: 500;
-            border-left: 3px solid transparent;
-        }
-        
-        .sidebar-nav a:hover {
-            background-color: rgba(196, 165, 116, 0.2);
-            color: #C4A574;
-            border-left-color: #C4A574;
-            transform: translateX(5px);
-        }
-        
-        .sidebar-nav a.active {
-            background-color: rgba(196, 165, 116, 0.3);
-            color: #C4A574;
-            border-left-color: #C4A574;
-        }
-        
-        /* Main Content */
-        .main-content {
-            margin-left: 250px;
-            min-height: 100vh;
-        }
-        
         .container {
-            width: 90%;
-            max-width: 1000px;
+            width: 80%;
             margin: auto;
+            overflow: hidden;
             padding: 20px 0;
         }
-        
         header {
-            background: linear-gradient(rgba(220, 210, 195, 0.9), rgba(220, 210, 195, 0.9)), url("./assets/sophisticated_graph.png") no-repeat center center;
-            background-size: cover;
-            color: #2C2B54;
-            padding: 60px 0;
+            background-color: #E0D9CE;
+            color: #4A4A4A;
+            padding: 30px 0;
             text-align: center;
-            border-bottom: 5px solid #C4A574;
-            position: relative;
+            border-bottom: #B8A78D 3px solid;
         }
-        
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .header-text {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        header img {
-            max-width: 300px;
-            height: auto;
-        }
-        
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #2C2B54;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            margin: 0;
+            color: #5C4B3C;
         }
-        
-        header p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            color: #4A4A6A;
-        }
-        
-        .feedback-section {
-            background: #FFFFFF;
-            padding: 40px;
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.08);
-            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        
-        .feedback-section h2 {
-            text-align: center;
-            color: #2C2B54;
-            margin-bottom: 30px;
-            font-size: 2em;
+        .feedback-form {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
         }
-        
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
+        .feedback-form label {
             display: block;
             margin-bottom: 8px;
             font-weight: bold;
-            color: #2C2B54;
         }
-        
-        input[type="text"],
-        input[type="email"],
-        textarea {
+        .feedback-form input[type="text"],
+        .feedback-form input[type="email"],
+        .feedback-form select,
+        .feedback-form textarea {
             width: calc(100% - 22px);
-            padding: 12px;
+            padding: 10px;
+            margin-bottom: 15px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            font-size: 1em;
-            font-family: inherit;
         }
-        
-        textarea {
-            height: 120px;
-            resize: vertical;
+        .feedback-form button {
+            background-color: #B8A78D;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
         }
-        
-        .rating-group {
-            margin-bottom: 20px;
+        .feedback-form button:hover {
+            background-color: #A0907A;
         }
-        
-        .rating {
+        .stars {
             display: flex;
             gap: 5px;
-            margin-top: 8px;
-            justify-content: center;
+            margin-bottom: 15px;
         }
-        
         .star {
-            font-size: 2em;
+            font-size: 24px;
             color: #ddd;
             cursor: pointer;
             transition: color 0.2s;
         }
-        
         .star:hover,
         .star.active {
-            color: #FFD700;
+            color: #B8A78D;
         }
-        
-        .submit-btn {
-            background-color: #C4A574;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            width: 100%;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(196, 165, 116, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(196, 165, 116, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(196, 165, 116, 0); }
-        }
-        
-        .submit-btn:hover {
-            background-color: #B8985F;
-            transform: translateY(-2px);
-        }
-        
-        .submit-btn:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-            animation: none;
-        }
-        
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            display: none;
+        footer {
             text-align: center;
-        }
-        
-        .error-message {
-            background: #f8d7da;
-            color: #721c24;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            display: none;
-            text-align: center;
-        }
-        
-        .testimonials-section {
-            background: #F9F7F4;
-            padding: 40px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-        
-        .testimonials-section h3 {
-            color: #2C2B54;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 1.5em;
-        }
-        
-        .testimonial-item {
-            background: #FFFFFF;
             padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #B8A78D;
+            color: #fff;
+            margin-top: 20px;
         }
-        
-        .testimonial-rating {
-            color: #FFD700;
-            margin-bottom: 10px;
-        }
-        
-        .testimonial-message {
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        
-        .testimonial-author {
-            font-weight: bold;
-            color: #C4A574;
-        }
-        
-        .testimonial-disclaimer {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 5px;
-        }
-        
-        /* Mobile Toggle Button */
-        .mobile-nav-toggle {
-            display: none;
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background: #C4A574;
-            color: white;
-            border: none;
-            padding: 12px 15px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 18px;
-            z-index: 1001;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .sidebar-nav {
-                width: 220px;
-            }
-            .main-content {
-                margin-left: 220px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .sidebar-nav {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease;
-            }
-            
-            .sidebar-nav.open {
-                transform: translateX(0);
-            }
-            
-            .main-content {
-                margin-left: 0;
-            }
-            
-            .mobile-nav-toggle {
-                display: block;
-            }
-            
-            .header-content {
-                flex-direction: column;
-            }
-            header h1 {
-                font-size: 2em;
-            }
-            header img {
-                max-width: 200px;
-            }
-        }
-        
-        /* Mobile Overlay */
-        .mobile-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 999;
-        }
-        
-        @media (max-width: 768px) {
-            .mobile-overlay.active {
-                display: block;
-            }
+        h1, h2, h3 {
+            color: #5C4B3C;
         }
     </style>
 </head>
 <body>
-    <!-- Mobile Navigation Toggle -->
-    <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
-    
-    <!-- Mobile Overlay -->
-    <div class="mobile-overlay" onclick="closeMobileNav()"></div>
-    
-    <!-- Fixed Sidebar Navigation -->
-    <nav class="sidebar-nav" id="sidebarNav">
-        <div class="logo">
-            <img src="./assets/marca-mTeWYzQJ.png" alt="IQ PESSOA Logo">
-            <h3>Navegação Rápida</h3>
-        </div>
-        <ul>
-            <li><a href="index.html#inicio">🏠 Início</a></li>
-            <li><a href="index.html#beneficios">⭐ O que Você Ganha</a></li>
-            <li><a href="index.html#servicos">🎯 Nossos Serviços</a></li>
-            <li><a href="index.html#analise">📊 Ponto de Partida</a></li>
-            <li><a href="index.html#futuro">🚀 Seu Futuro Financeiro</a></li>
-            <li><a href="index.html#contato">📞 Contato</a></li>
-            <li><a href="feedback.html" class="active">💬 Deixar Feedback</a></li>
-        </ul>
-    </nav>
-    
-    <!-- Main Content -->
-    <div class="main-content">
-        <header>
-            <div class="container">
-                <div class="header-content">
-                    <img src="./assets/marca-mTeWYzQJ.png" alt="IQ PESSOA Logo">
-                    <div class="header-text">
-                        <h1>Deixe seu Feedback</h1>
-                        <p>Sua opinião é muito importante para nós!</p>
-                    </div>
-                </div>
-            </div>
-        </header>
+    <header>
+        <h1>Feedback - IQ PESSOA CONSULTORIA</h1>
+        <p>Sua opinião é muito importante para nós!</p>
+    </header>
 
-        <div class="container">
-            <section class="feedback-section">
-                <h2>Compartilhe Sua Experiência</h2>
-                
-                <div id="successMessage" class="success-message">
-                    Obrigado pelo seu feedback! Sua avaliação foi enviada com sucesso e será analisada em breve.
-                </div>
-                
-                <div id="errorMessage" class="error-message"></div>
-                
-                <div class="form-container">
-                    <form name="feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="feedbackForm">
-                        <input type="hidden" name="form-name" value="feedback">
-                        <p style="display: none;">
-                            <label>Não preencha este campo se você for humano: <input name="bot-field"></label>
-                        </p>
-                        
-                        <div class="form-group">
-                            <label for="name">Nome Completo *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="rating-group">
-                            <label>Avaliação *</label>
-                            <div class="rating" id="rating">
-                                <span class="star" data-rating="1">★</span>
-                                <span class="star" data-rating="2">★</span>
-                                <span class="star" data-rating="3">★</span>
-                                <span class="star" data-rating="4">★</span>
-                                <span class="star" data-rating="5">★</span>
-                            </div>
-                            <input type="hidden" id="ratingValue" name="rating" value="0" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Seu Comentário *</label>
-                            <textarea id="message" name="message" placeholder="Conte-nos sobre sua experiência com a IQ PESSOA..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">Enviar Feedback</button>
-                    </form>
-                </div>
-            </section>
+    <div class="container">
+        <section class="content">
+            <h2>Deixe seu Feedback</h2>
+            <p>Gostaríamos de saber sua opinião sobre nossos serviços. Seu feedback nos ajuda a melhorar continuamente.</p>
             
-            <section class="testimonials-section">
-                <h3>Feedbacks de Nossos Clientes</h3>
-                
-                <div class="testimonial-item">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <div class="testimonial-message">
-                        "Nunca imaginei que poderia ter uma assessoria financeira tão personalizada e independente. O Isaias realmente olha para o meu perfil e objetivos."
-                    </div>
-                    <div class="testimonial-author">Cliente Satisfeito</div>
-                    <div class="testimonial-disclaimer">Depoimento autorizado de cliente real. Nome omitido por confidencialidade.</div>
-                </div>
-                
-                <div class="testimonial-item">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <div class="testimonial-message">
-                        "A diferença na minha carteira foi notável. Finalmente tenho uma estratégia que faz sentido para os meus objetivos de longo prazo."
-                    </div>
-                    <div class="testimonial-author">Investidor Experiente</div>
-                    <div class="testimonial-disclaimer">Depoimento autorizado de cliente real. Nome omitido por confidencialidade.</div>
-                </div>
-                
-                <div class="testimonial-item">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <div class="testimonial-message">
-                        "Consegui sair das dívidas e começar a construir meu patrimônio com o planejamento da IQ PESSOA. Recomendo para todos!"
-                    </div>
-                    <div class="testimonial-author">Novo Investidor</div>
-                    <div class="testimonial-disclaimer">Depoimento autorizado de cliente real. Nome omitido por confidencialidade.</div>
-                </div>
-            </section>
-        </div>
+            <div class="feedback-form">
+                <form name="feedback" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="feedback" />
+                    
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="avaliacao">Avaliação Geral:</label>
+                    <select id="avaliacao" name="avaliacao" required>
+                        <option value="">Selecione uma avaliação</option>
+                        <option value="5">⭐⭐⭐⭐⭐ Excelente</option>
+                        <option value="4">⭐⭐⭐⭐ Muito Bom</option>
+                        <option value="3">⭐⭐⭐ Bom</option>
+                        <option value="2">⭐⭐ Regular</option>
+                        <option value="1">⭐ Precisa Melhorar</option>
+                    </select>
+                    
+                    <label for="comentarios">Comentários:</label>
+                    <textarea id="comentarios" name="comentarios" rows="5" placeholder="Conte-nos sobre sua experiência..." required></textarea>
+                    
+                    <button type="submit">Enviar Feedback</button>
+                </form>
+            </div>
+        </section>
     </div>
 
-    <script>
-        let selectedRating = 0;
-
-        // Mobile Navigation
-        function toggleMobileNav() {
-            const sidebar = document.getElementById('sidebarNav');
-            const overlay = document.querySelector('.mobile-overlay');
-            sidebar.classList.toggle('open');
-            overlay.classList.toggle('active');
-        }
-
-        function closeMobileNav() {
-            const sidebar = document.getElementById('sidebarNav');
-            const overlay = document.querySelector('.mobile-overlay');
-            sidebar.classList.remove('open');
-            overlay.classList.remove('active');
-        }
-
-        // Sistema de rating com estrelas
-        document.querySelectorAll('.star').forEach(star => {
-            star.addEventListener('click', function() {
-                selectedRating = parseInt(this.dataset.rating);
-                document.getElementById('ratingValue').value = selectedRating;
-                updateStars();
-            });
-
-            star.addEventListener('mouseover', function() {
-                const rating = parseInt(this.dataset.rating);
-                highlightStars(rating);
-            });
-        });
-
-        document.getElementById('rating').addEventListener('mouseleave', function() {
-            updateStars();
-        });
-
-        function highlightStars(rating) {
-            document.querySelectorAll('.star').forEach((star, index) => {
-                if (index < rating) {
-                    star.classList.add('active');
-                } else {
-                    star.classList.remove('active');
-                }
-            });
-        }
-
-        function updateStars() {
-            highlightStars(selectedRating);
-        }
-
-        // Envio do formulário
-        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-            const successMessage = document.getElementById('successMessage');
-            const errorMessage = document.getElementById('errorMessage');
-            const submitBtn = document.querySelector('.submit-btn');
-
-            // Esconder mensagens anteriores
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
-
-            // Validar rating
-            if (selectedRating === 0) {
-                e.preventDefault();
-                errorMessage.textContent = 'Por favor, selecione uma avaliação (estrelas).';
-                errorMessage.style.display = 'block';
-                return false;
-            }
-
-            // Desabilitar botão durante envio
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Enviando...';
-
-            // O Netlify Forms processará o envio automaticamente
-            // Após o envio, o usuário será redirecionado ou verá uma mensagem de confirmação
-        });
-
-        // Resetar formulário após envio bem-sucedido (se a página não for redirecionada)
-        window.addEventListener('load', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('success') === 'true') {
-                document.getElementById('successMessage').style.display = 'block';
-                document.getElementById('feedbackForm').reset();
-                selectedRating = 0;
-                updateStars();
-            }
-        });
-    </script>
+    <footer>
+        <p>&copy; 2024 IQ PESSOA CONSULTORIA FINANCEIRA E DE PATRIMÔNIO. Todos os direitos reservados.</p>
+        <p><a href="index.html" style="color: #fff;">Voltar ao Site Principal</a></p>
+    </footer>
 </body>
 </html>
-
